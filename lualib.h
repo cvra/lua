@@ -21,9 +21,6 @@ LUAMOD_API int (luaopen_coroutine) (lua_State *L);
 LUAMOD_API int (luaopen_table) (lua_State *L);
 
 
-#define LUA_OSLIBNAME	"os"
-LUAMOD_API int (luaopen_os) (lua_State *L);
-
 #define LUA_STRLIBNAME	"string"
 LUAMOD_API int (luaopen_string) (lua_State *L);
 
