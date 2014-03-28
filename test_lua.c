@@ -21,11 +21,16 @@ int main(void)
 	/* In the lines below, I load and run the Lua code contained in the file */
 	/* "script.lua". */
 	/* Plus print some text directly from C. */
-    const char *command = "print('test')\n";
+    char *command[100];
 	printf("This line in directly from C\n\n");
 
-    luaL_loadbuffer(l, command, strlen(command), "line");
-    lua_pcall(l, 0, 0, 0);
+    while(1) {
+        printf(">> ");
+        if (gets(command) == NULL)
+            break;
+        luaL_loadstring(l, command);
+        lua_pcall(l, 0, 0, 0);
+    }
 
 	printf("\nBack to C again\n\n");
 
