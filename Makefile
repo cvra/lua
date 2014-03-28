@@ -37,7 +37,7 @@ LIB_O=	lauxlib.o lbaselib.o lbitlib.o lcorolib.o ldblib.o \
 BASE_O= $(CORE_O) $(LIB_O) $(MYOBJS)
 
 LUA_T=	lua
-LUA_O=	lua.o
+LUA_O=	test_lua.o
 
 LUAC_T=	luac
 LUAC_O=	luac.o
